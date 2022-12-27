@@ -1,0 +1,23 @@
+<h2>
+  {{label.title}}
+
+</h2>
+<button (click)="toggleState()">
+  Click
+</button>
+<ng-container *ngIf="state === 'open'">
+
+  <ng-container *ngIf="data$ |async as data;else loader">
+
+    <h2>
+      {{data.user.username}}
+    </h2>
+    <div class="post" *ngFor="let post of data.post1">
+      <div class="title">{{post.title}}</div>
+      <p>{{post.body}}</p>
+    </div>
+
+  </ng-container>
+</ng-container>
+
+<ng-template #loader>Loading</ng-template>

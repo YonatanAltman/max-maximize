@@ -1,0 +1,23 @@
+$body-height:80vh;
+
+:host{
+  height: 100vh;
+  .flx{
+    display: flex;
+
+  }
+  .nav{
+    height: 120px;
+    background: rgba(150, 150, 150, 0.34);
+  }
+  .side-bar{
+    width: 200px;
+    height: $body-height;
+    max-width: 80vw;
+    background: #59f359;
+  }
+  .body{
+    height: $body-height;
+    overflow: auto;
+  }
+}
